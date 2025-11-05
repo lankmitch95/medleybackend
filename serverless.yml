@@ -1,0 +1,12 @@
+service: med-manager
+frameworkVersion: '3'
+
+provider:
+  name: aws
+  runtime: nodejs20.x
+  region: us-east-1
+  profile: mitch
+
+functions:
+  hello:
+    handler: handler.hello
