@@ -11,9 +11,14 @@
   "license": "ISC",
   "type": "commonjs",
   "devDependencies": {
-    "serverless": "^3.39.0",
+    "serverless": "^4.23.0",
+    "serverless-dynamodb-local": "^0.2.40",
     "serverless-offline": "^14.4.0",
     "ts-node": "^10.9.2",
     "typescript": "^5.9.3"
+  },
+  "dependencies": {
+    "@aws-sdk/client-dynamodb": "^3.925.0",
+    "@aws-sdk/lib-dynamodb": "^3.925.0"
   }
 }
