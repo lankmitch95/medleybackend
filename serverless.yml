@@ -10,3 +10,21 @@ provider:
 functions:
   hello:
     handler: handler.hello
+
+resources:
+  Resources:
+    MedicationsTable:
+      Type: AWS::DynamoDB::Table
+      Properties:
+        TableName: Medications
+        AttributeDefinitions:
+          - AttributeName: patientId
+            AttributeType: S
+          - AttributeName: medicationId
+            AttributeType: S
+        KeySchema:
+          - AttributeName: patientId
+            KeyType: HASH
+          - AttributeName: medicationId
+            KeyType: RANGE
+        BillingMode: PAY_PER_REQUEST
