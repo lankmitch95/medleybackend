@@ -10,6 +10,15 @@ provider:
 functions:
   hello:
     handler: handler.hello
+  testDynamo:
+    handler: src/handlers/testDB.handler
+    events:
+      - httpApi:
+          path: /test-dynamo
+          method: get
+
+plugins:
+  - serverless-offline
 
 resources:
   Resources:
